@@ -1,0 +1,13 @@
+##
+## OMakefile for gtest-all
+##
+
+CC = g++
+CXXFLAGS += -I../../../include -I../ -DGTEST_HAS_PTHREAD=0
+
+gtest-all.o: gtest-all.cc
+	$(CC) $(CXXFLAGS) -c -o gtest-all.o gtest-all.cc
+
+
+.PHONY: clean
+	rm -f *.o

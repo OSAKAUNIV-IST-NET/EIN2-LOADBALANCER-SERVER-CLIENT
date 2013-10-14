@@ -1,0 +1,18 @@
+##
+## OMakefile for test
+##
+
+SRCS = $(removesuffix $(filter %.cpp, $(ls R, ./)))
+SRC_DIR = ../src/client ../src/server
+CXXFILES[] = $(removesuffix $(filter %.cpp, $(ls R, $(SRC_DIR))))
+TEST_CXXFILES[] = $(filter-out %main, $(CXXFILES))
+
+CXXFLAGS += -I../include
+LIBS += ./lib/libgtest ../src/lib/libcommon
+
+
+.DEFAULT: $(CXXProgram test, $(SRCS) $(TEST_CXXFILES))
+
+.SUBDIRS: lib
+.PHONY: clean
+	rm -f *.o *.a

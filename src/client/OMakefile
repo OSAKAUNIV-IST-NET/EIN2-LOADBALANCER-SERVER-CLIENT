@@ -1,0 +1,20 @@
+##
+## OMakefile for client
+##
+
+TARGET = client
+SRCS = main client
+
+CXXFLAGS += -g -I ../../include -pthread
+#LDFLAGS += -L ../lib
+LIBS +=  ../lib/libcommon
+
+.DEFAULT: $(CXXProgram $(TARGET), $(SRCS))
+
+.BUILD_SUCCESS:
+	if $(file-exists $(TARGET))
+		cp $(TARGET) ../../
+
+.PHONY: clean
+	rm -f $(TARGET) ../../$(TARGET) *.o
+

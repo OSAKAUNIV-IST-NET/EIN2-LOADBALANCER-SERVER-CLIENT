@@ -1,0 +1,19 @@
+##
+## OMakefile for library
+##
+
+CXXFLAGS += -g -I ../../include
+CFLAGS += -g -I ../../include
+
+#StaticCLibrary(libjsmn, jsmn)
+#StaticCLibrary(libmt, mt19937ac)
+
+#LIBS += ./libjsmn
+
+StaticCXXLibrary(libcommon, common)
+
+
+.PHONY: clean
+	rm -f *.o *.a
+
+

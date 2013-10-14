@@ -1,0 +1,21 @@
+##
+## OMakefile for server
+##
+
+TARGET = server
+SRC_DIR = ./
+SRCS[] = $(removesuffix $(filter %.cpp, $(ls R, $(SRC_DIR))))
+
+CXXFLAGS += -g -I ../../include -pthread
+#LDFLAGS += -L ../lib
+LIBS += ../lib/libcommon
+
+.DEFAULT: $(CXXProgram $(TARGET), $(SRCS))
+
+.BUILD_SUCCESS:
+	if $(file-exists $(TARGET))
+		cp $(TARGET) ../../
+
+.PHONY: clean
+	rm -f $(TARGET) ../../$(TARGET) *.o
+

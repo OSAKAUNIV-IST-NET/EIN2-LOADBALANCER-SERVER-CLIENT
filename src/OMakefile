@@ -1,0 +1,5 @@
+##
+## OMakefile for src
+##
+
+.SUBDIRS: client server lib

@@ -1,0 +1,16 @@
+##
+## OMakefile for libgtest
+##
+
+TARGET = libgtest
+SRC = src/gtest-all
+CC = g++
+
+CXXFLAGS += -I../../include -DGTEST_HAS_PTHREAD=0
+
+StaticCXXLibrary($(TARGET), $(SRC))
+
+.SUBDIRS: src
+
+.PHONY: clean
+	rm -f *.a
