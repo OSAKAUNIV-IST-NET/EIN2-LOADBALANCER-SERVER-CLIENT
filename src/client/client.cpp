@@ -8,7 +8,7 @@
 #include <arpa/inet.h>
 #include <pthread.h>
 #include <netinet/ip.h> 
-
+#include <unistd.h>
 #include "common.h"
 #include "server.h"
 #include "client.h"

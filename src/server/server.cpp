@@ -11,7 +11,7 @@
 #include <signal.h>
 #include <sys/file.h>
 #include <netinet/ip.h> 
-
+#include <unistd.h>
 #include "common.h"
 #include "server.h"
 
