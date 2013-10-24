@@ -10,24 +10,33 @@ trema，サーバ，クライアントを実行するスクリプト
 !! trema，サーバ，クライアントのパスを適切に設定する必要あり
 
 ## 指定できるパラメータ（[xxx] は初期値）
+
 |-- TREMA          : 実行ファイル "trema" のパス [../trema/trema]
+
 |-- CLIENT         : 実行ファイル "client" のパス [./bin/client]
+
 |-- SERVER         : 実行ファイル "server" のパス [./bin/server]
+
 |-- DIR_HP_FILE    : HP ファイルを置くディレクトリ [/tmp/]
+
 |-- HP_FILE_PREFIX : HP ファイルの名前の先頭 [server] # server_<IP address>_<MAC address>
+
 |-- PID_PATH       : 実行したプロセスを記憶しておくための PID ファイルのディレクトリを置くディレクトリ [/tmp/]
+
 |-- PID_DIR        : PID ファイルを置くディレクトリの名前 [OpenFlow-LB]
+
 |-- PID_FILE_PREFIX_CLIENT : クライアント用の PID ファイルの名前の先頭 [client.] # client.<PID>
+
 `-- PID_FILE_PREFIX_SERVER : サーバ用の PID ファイルの名前の先頭 [server.] # server.<PID>
 
 ## 動作
-1) 実行中の trema およびサーバ，クライアントのプロセスを kill する．
-2) HP ファイルを削除し，クリーンする．
-3) trema を起動する．
-4) クライアントを起動する．
-5) サーバを起動する．
-6) サーバ，クライアントが終了後，得点を取得し，合計を計算する．
-7) 実行したプロセスを kill する．
+* 実行中の trema およびサーバ，クライアントのプロセスを kill する．
+* HP ファイルを削除し，クリーンする．
+* trema を起動する．
+* クライアントを起動する．
+* サーバを起動する．
+* サーバ，クライアントが終了後，得点を取得し，合計を計算する．
+* 実行したプロセスを kill する．
 
 
 # 設定ファイル（level-?.conf）
