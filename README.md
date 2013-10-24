@@ -1,13 +1,13 @@
 # 実行方法（要 root 権限）
-sudo ./run.rb <level config> <load balancer> <network config>
+sudo ./run.rb \<level config\> \<load balancer\> \<network config\>
 
-Ex.) sudo ./run.rb conf/level-1.conf load_balancer.rb conf/network.conf
+Ex.) `sudo ./run.rb conf/level-1.conf load_balancer.rb conf/network.conf`
 
 
 # run.rb
 trema，サーバ，クライアントを実行するスクリプト
-!! 各動作の間に処理待ちのためにスリープを入れており，スリープ時間を計算機の動作速度に合わせて調整する必要あり
-!! trema，サーバ，クライアントのパスを適切に設定する必要あり
+* 各動作の間に処理待ちのためにスリープを入れており，スリープ時間を計算機の動作速度に合わせて調整する必要あり
+* trema，サーバ，クライアントのパスを適切に設定する必要あり
 
 ## 指定できるパラメータ（[xxx] は初期値）
 
@@ -17,17 +17,17 @@ trema，サーバ，クライアントを実行するスクリプト
 
 |-- SERVER         : 実行ファイル "server" のパス [./bin/server]
 
-|-- DIR_HP_FILE    : HP ファイルを置くディレクトリ [/tmp/]
+|-- DIR\_HP\_FILE    : HP ファイルを置くディレクトリ [/tmp/]
 
-|-- HP_FILE_PREFIX : HP ファイルの名前の先頭 [server] # server_<IP address>_<MAC address>
+|-- HP\_FILE\_PREFIX : HP ファイルの名前の先頭 [server] # server_<IP address>_<MAC address>
 
-|-- PID_PATH       : 実行したプロセスを記憶しておくための PID ファイルのディレクトリを置くディレクトリ [/tmp/]
+|-- PID\_PATH       : 実行したプロセスを記憶しておくための PID ファイルのディレクトリを置くディレクトリ [/tmp/]
 
-|-- PID_DIR        : PID ファイルを置くディレクトリの名前 [OpenFlow-LB]
+|-- PID\_DIR        : PID ファイルを置くディレクトリの名前 [OpenFlow-LB]
 
-|-- PID_FILE_PREFIX_CLIENT : クライアント用の PID ファイルの名前の先頭 [client.] # client.<PID>
+|-- PID\_FILE\_PREFIX_CLIENT : クライアント用の PID ファイルの名前の先頭 [client.] # client.<PID>
 
-`-- PID_FILE_PREFIX_SERVER : サーバ用の PID ファイルの名前の先頭 [server.] # server.<PID>
+`-- PID\_FILE\_PREFIX_SERVER : サーバ用の PID ファイルの名前の先頭 [server.] # server.<PID>
 
 ## 動作
 * 実行中の trema およびサーバ，クライアントのプロセスを kill する．
